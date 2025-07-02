@@ -98,8 +98,8 @@ document.querySelector('.btn-box button[data-effect="first"]').addEventListener(
 document.querySelector('.btn-box button[data-effect="second"]').addEventListener('click',()=>{
   spansNumFunc()
   createSpans()
-  colorsSpan()
   spansSeperation()
+  colorsSpan()
 })
 
 
