@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style8.css" />
+    <!-- <script type="module" src="script.js"></script> -->
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/page2.html">clock</a>
+      <a href="/page3.html">spiral</a>
+      <a href="/page4.html">spiral2</a>
+  <a href="/page5.html">line-effect</a>
+  <a href="/page6.html">parallext text Effect</a>
+  <a href="/page7.html">Glowing ring</a>
+  <a href="/page8.html" aria-current="page">Text-shadow moving</a>
+
+    </nav>
+
+    <main id="main8" class="main8">
+      <div id="text" class="text">shadow</div>
+      <div id="light" class="light"></div>
+    </main>
+    <script>
+  main8.addEventListener('mousemove',(e)=>{
+const elmLeftMatgin = main8.getBoundingClientRect().x
+const elmLeftTopMargin = main8.getBoundingClientRect().y
+
+const mouseX = e.clientX;
+const mouseY = e.clientY;
+light.style.left = mouseX - elmLeftMatgin + 'px'
+light.style.top = mouseY -elmLeftTopMargin + 'px'
+const distanceX = mouseX - elmLeftMatgin - text.offsetLeft - (text.offsetWidth / 2)
+const distanceY = mouseY -elmLeftTopMargin - text.offsetTop - (text.offsetHeight / 2)
+
+
+let newTextShadow = '';
+for (let i=0;i<200;i++){
+  let shadowX = -distanceX * (i/600);
+  let shadowY =-distanceY *  (i/600);
+  let opacity =1 - (i/100)
+  newTextShadow += (newTextShadow?',':'') + shadowX + 'px ' + shadowY + 'px ' + '0 rgba(33,33,33,'+opacity+ ')'; 
+
+}
+console.log(newTextShadow)
+text.style.textShadow = newTextShadow
+    })
+    </script>
+  </body>
+</html>

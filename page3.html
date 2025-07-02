@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Other page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style-main.css" />
+    <link rel="stylesheet" href="style3.css" />
+    <script type="module" src="script3.js"></script>
+  </head>
+  <body>
+  <nav>
+  <a href="/">Home</a>
+  <a href="/page2.html">clock</a>
+  <a href="/page3.html"  aria-current="page">spiral</a>
+  <a href="/page4.html">spiral2</a>
+  <a href="/page5.html">line-effect</a>
+  <a href="/page6.html">parallext text Effect</a>
+  <a href="/page7.html">Glowing ring</a>
+  <a href="/page8.html">Text-shadow moving</a>
+  </nav>
+  <main>
+    <p>page3.html, style3.css, script3.js</p>
+  <div class="spiral-container">
+  </div>
+  <div class="summery-cont">
+
+    <h3>animation principle</h3>
+  <ul>
+  <li>the div and the span El. has varible on the inline-style that applyed via the JS, that's for we can use those varibles in the css include animation (the animation reconzie the var frm the style attribute on the inline style), every var had differents value there for the css rules had diff. value too , i think we cuold achive the same effect by SCSS @ for loop</li>
+  <li>some Elements without dimentions, but they contain other nested El. - here, we have 4 divs without width and height each div has 20 nested spans without width and height too, just the span::befor has dimentions</li>
+  <li>the cool animation effect achieved by the nagative delay-animation, every span:before has diffferent negative delay witch mean that it more ahead then the other(smaller than the other spans)</li>
+  <li>filter:hue-rotate(70deg) - color efect</li>
+  </ul>
+  </div>
+  </main>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<!--
+  Need a visual blank slate?
+  Remove all code in `styles.css`!
+-->
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="style7.css" />
+<!-- <script type="module" src="script.js"></script> -->
+</head>
+<body>
+<nav>
+<a href="/">Home</a>
+<a href="/page2.html">clock</a>
+<a href="/page3.html">spiral</a>
+<a href="/page4.html">spiral2</a>
+<a href="/page5.html">line-effect</a>
+<a href="/page6.html">parallext text Effect</a>
+<a href="/page7.html" aria-current="page">Glowing ring</a>
+<a href="/page8.html">Text-shadow moving</a>
+</nav>
+<div class="summery">
+  <p>summery:look at the html to see the elements structure</p>
+<ul>
+  <li>only the outer container is with position relative, all the other elelemtns with position absolute - it lead tot the same reference point</li>
+<li>all the .cilrcles in absolute position</li> 
+<li>the 3 first .circles has :bifore EL that createa the arc by using linear-gradient</li>
+<li>the span inside the 3 first .circles hide part of the arc and we get narrow arc</li> 
+<li>if we change the background-size of the .circle:before we can change the effect and form whole circle </li>
+<li>the i elelemt response on teh glowing circle effect</li>
+<li>the change of the color is achive by filter:hue-rotate, instead to change every i element</li>
+<li>the reflection effect achieve by <b> -webkit-box-reflect:below 0px linear-gradient(transparent,transparent,#0005)</b> </li>
+</ul>
+</div>
+<section class="glowing-container">
+  <div class="loader">
+  <div class="circle"><span></span></div>
+  <div class="circle"><span></span></div>
+  <div class="circle"><span></span></div>
+  <div class="circle"><i></i></div>
+  <div class="circle"><i></i></div>
+  <div class="circle"><i></i></div>
+  </div>
+</section>
+</body>
+</html>

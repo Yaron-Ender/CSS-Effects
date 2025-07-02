@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style6.css" />
+
+    <!-- <script type="module" src="script.js"></script> -->
+  </head>
+  <body>
+    <nav>
+      <a href="/" >Home</a>
+      <a href="/page2.html">clock</a>
+      <a href="/page3.html">spiral</a>
+      <a href="/page4.html">spiral2</a>
+  <a href="/page5.html">line-effect</a>
+  <a href="/page6.html" aria-current="page">parallext text Effect</a>
+  <a href="/page7.html">Glowing ring</a>
+  <a href="/page8.html">Text-shadow moving</a>
+
+    </nav>
+   <section>
+  <div class="skew1">
+  <h2 class="layer">Parallex text Effect</h2>
+  </div>
+  <div class="text-box">
+  <div class="skew2">
+  <h2 class="layer">Parallex text Effect</h2>
+  </div>
+  </div>
+  </section>
+</body>
+<script>
+
+  function parallex(e){
+  
+    console.log(document.documentElement.clientWidth)
+    this.querySelectorAll('.layer').forEach((layer)=>{
+    let x = (document.documentElement.clientWidth - e.pageX *2) / 2
+    console.log(x)
+    layer.style.transform=`translateX(${-x}px)`
+    })
+}
+
+document.addEventListener('mousemove',parallex)
+</script>
+</html>

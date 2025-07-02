@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Other page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles2.css" />
+
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+    <a href="/">Home</a>
+    <a href="/page2.html"  aria-current="page">clock</a>
+    <a href="/page3.html">spiral</a>
+    <a href="/page4.html">spiral2</a>
+  <a href="/page5.html">line-effect</a>
+  <a href="/page6.html">parallext text Effect</a>
+  <a href="/page7.html">Glowing ring</a>
+  <a href="/page8.html">Text-shadow moving</a>
+    </nav>
+    <main>
+      <h1>clock</h1>
+      <section id="time">
+      <div class="circle" style="--clr:#ff2972">
+      <svg>
+      <circle cx='70' cy='70' r='70' id="hh"></circle>
+    </svg>
+    <div class="hours">00<br><span>Hours</span></div>
+  </div>
+  <!-- second timer -->
+  <div class="timer-container">
+  <h2>timer</h2>
+  <button class="timer-btn">start</button>
+  <div class="circle" style="--clr:#1eb9ff">
+  <svg>
+  <circle cx='70' cy='70' r='70' id="ss"></circle>
+</svg>
+<div class="display-container">
+<div class="second-2">00</div>
+<div class="text">hai</div>
+</div>
+
+</div>
+  </div>
+</section>
+<div class="circle-effects"></div>
+
+
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define the smile path -->
+  <path id="smilePath" d="M50,150 Q200,50 350,150" fill="none" stroke="lightgray" stroke-width="2" />
+
+  <!-- Animate text along the smile path -->
+  <text font-size="24" font-family="Arial, sans-serif" fill="blue">
+    <textPath href="#smilePath" startOffset="0%">
+      Smiling Text Animation
+    </textPath>
+    <animate attributeName="startOffset" from="0%" to="100%" dur="4s" repeatCount="indefinite" />
+  </text>
+</svg>
+
+
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define the smile path -->
+  <path id="smilePath" d="M50,150 Q200,50 350,150" fill="none" stroke="lightgray" stroke-width="1" />
+
+  <!-- Text moving along the path -->
+  <text font-size="24" font-family="Arial, sans-serif" fill="blue">
+    <textPath href="#smilePath" startOffset="0%">
+      Smiling Text Animation
+      <animate attributeName="startOffset" from="0%" to="100%" dur="4s" repeatCount="indefinite" />
+    </textPath>
+  </text>
+</svg>
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background for reference -->
+  <line x1="200" y1="0" x2="200" y2="200" stroke="lightgray" stroke-width="1" />
+
+  <!-- Text animation -->
+  <text x="200" y="100" font-size="24" font-family="Arial, sans-serif" fill="blue">
+    <tspan text-anchor="start">Start Align</tspan>
+    <set attributeName="text-anchor" to="middle" begin="2s" dur="2s" fill="freeze" />
+    <set attributeName="text-anchor" to="end" begin="4s" dur="2s" fill="freeze" />
+    <animate attributeName="text-anchor" values="start;middle;end" dur="6s" repeatCount="indefinite"/>
+  </text>
+</svg>
+
+
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Reference line for alignment -->
+  <line x1="200" y1="0" x2="200" y2="200" stroke="lightgray" stroke-width="1" />
+
+  <!-- Animated text -->
+  <text y="100" font-size="24" font-family="Arial, sans-serif" fill="blue">
+    <tspan id="animatedText" text-anchor="middle" x="200">
+      Aligning Text
+    </tspan>
+    <!-- Animate 'x' attribute to mimic alignment changes -->
+    <animate attributeName="x" values="50;200;350" dur="6s" repeatCount="indefinite" />
+  </text>
+</svg>
+
+
+ </main>
+  </body>
+</html>
